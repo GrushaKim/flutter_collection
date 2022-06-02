@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome to Grusha's flutter world!",
+  "chooseLang": "Please choose language.",
+  "langTxt": "Grusha's flutter world is shown in {lang} language.",
+  "home": "Home",
+  "profile": "Profile",
+  "ui": "UI",
+  "functions": "Functions"
+}

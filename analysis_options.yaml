@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    always_use_package_imports: true
+    avoid_empty_else: true
+
+linter:
+  rules:
+    avoid_print: true # Uncomment to disable the `avoid_print` rule
+    avoid_unnecessary_containers: true # Avoid wrapping widgets in unnecessary containers that make code more complex.
+    camel_case_types: true # Classes and typedefs should capitalize the fist letter of each word without separators.
+    unnecessary_const: true # Avoid repeating const keyword in a const context.
+    unnecessary_new: true # Avoid `new` keyword to create instances.
+    unnecessary_this: true # Use `this` when not needed to avoid shadowing.
+    use_key_in_widget_constructors: false
+    prefer_const_constructors_in_immutables: false
+    curly_braces_in_flow_control_structures: true # Use curly braces for all flow control.
+    constant_identifier_names: false
+
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
