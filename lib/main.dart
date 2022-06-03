@@ -6,6 +6,7 @@ import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/utils/locators.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,7 @@ void main() async {
     EasyLocalization(
       supportedLocales: const [
         Locale('en', 'US'),
-        Locale('en', 'RU'),
+        Locale('ru', 'RU'),
       ],
       fallbackLocale: const Locale('en', 'US'),
       path: 'assets/translations',
@@ -38,35 +39,61 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       onGenerateRoute: Routes.generateRoute,
+      // initialRoute: RouteNames.Splash,
       onGenerateInitialRoutes: (_) => [
         Routes.generateRoute(RouteSettings(name: RouteNames.Splash)),
       ],
       theme: themeData(),
-      home: const SplashScreen(),
     );
   }
+
 
   themeData() => ThemeData(
     textTheme: textTheme(),
   );
 
-  textTheme() => const TextTheme(
-    headline1: TextStyle(
-      fontSize: 14,
-      color: MyColors.txtBk,
-      letterSpacing: -75,
-    ),
-    bodyText1: TextStyle(
+  textTheme() => TextTheme(
+    headline1: GoogleFonts.montserrat(
       fontSize: 24,
       color: MyColors.txtBk,
-      fontWeight: FontWeight.bold,
-      letterSpacing: -1,
+      letterSpacing: -.1,
+      fontWeight: FontWeight.w800
     ),
-    caption: TextStyle(
+    headline2: GoogleFonts.bebasNeue(
+      fontSize: 36,
+      color: MyColors.mainScarlet,
+      fontWeight: FontWeight.w800
+    ),
+    bodyText1: GoogleFonts.montserrat(
+      fontSize: 14,
+      color: MyColors.txtBk,
+      letterSpacing: -.7,
+      fontWeight: FontWeight.w400
+    ),
+    caption: GoogleFonts.montserrat(
       fontSize: 12,
       color:MyColors.hintGr,
       letterSpacing: -.7,
     ),
   );
+
+  // textTheme() => const TextTheme(
+  //   headline1: TextStyle(
+  //     fontSize: 14,
+  //     color: MyColors.txtBk,
+  //     letterSpacing: -75,
+  //   ),
+  //   bodyText1: TextStyle(
+  //     fontSize: 24,
+  //     color: MyColors.txtBk,
+  //     fontWeight: FontWeight.bold,
+  //     letterSpacing: -1,
+  //   ),
+  //   caption: TextStyle(
+  //     fontSize: 12,
+  //     color:MyColors.hintGr,
+  //     letterSpacing: -.7,
+  //   ),
+  // );
 
 }
