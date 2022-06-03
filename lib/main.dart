@@ -39,7 +39,6 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       onGenerateRoute: Routes.generateRoute,
-      // initialRoute: RouteNames.Splash,
       onGenerateInitialRoutes: (_) => [
         Routes.generateRoute(RouteSettings(name: RouteNames.Splash)),
       ],
@@ -60,7 +59,7 @@ class MyApp extends StatelessWidget {
       fontWeight: FontWeight.w800
     ),
     headline2: GoogleFonts.bebasNeue(
-      fontSize: 36,
+      fontSize: 42,
       color: MyColors.mainScarlet,
       fontWeight: FontWeight.w800
     ),
