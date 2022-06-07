@@ -6,7 +6,6 @@ import 'package:flutter_collection/routes/routes.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:flutter_collection/widgets/custom_scaffold.dart';
 import 'package:flutter_collection/widgets/helper.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get_it/get_it.dart';
 import 'package:lottie/lottie.dart';
 
