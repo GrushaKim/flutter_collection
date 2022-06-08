@@ -25,4 +25,8 @@ class _UIScreenState extends State<UIScreen> {
   slotMachine() => Container(
 
   );
+
+  fadeInOutCarousel() => Container(
+    
+  );
 }

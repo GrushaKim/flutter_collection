@@ -16,9 +16,14 @@ dependencies:
   lottie: ^1.3.0
   fluttertoast: ^8.0.9
   salomon_bottom_bar: ^3.3.1
+  animated_text_kit: ^4.2.1
 
   # state management
   flutter_riverpod: ^1.0.3
+  hooks_riverpod: ^1.0.3
+
+  # api fetcher
+  dio: ^4.0.6
 
   # di
   get_it: ^7.2.0
@@ -26,16 +31,18 @@ dependencies:
   # utils
   easy_localization: ^3.0.0
   google_fonts: ^3.0.1
+  flutter_svg: ^1.0.3
 
   cupertino_icons: ^1.0.2
-  flutter_svg: ^1.0.3
-  animated_text_kit: ^4.2.1
+  freezed_annotation: ^2.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.4
+  build_runner: ^2.1.11
+  freezed: ^2.0.3+1
 
 # following page: https://dart.dev/tools/pub/pubspec
 
