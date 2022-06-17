@@ -5,7 +5,11 @@ import 'package:flutter_collection/widgets/helper.dart';
 import 'package:get_it/get_it.dart';
 
 class DemoPopup extends StatefulWidget {
-  DemoPopup({Key? key}) : super(key: key);
+  DemoPopup({
+    required this.item,
+  });
+
+  final Widget item;
 
   @override
   State<DemoPopup> createState() => _DemoPopupState();
@@ -32,6 +36,12 @@ class _DemoPopupState extends State<DemoPopup> with
 
     animation = Tween<double>(begin: 0, end: 1.0).animate(controller);
     controller.forward();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -71,8 +81,7 @@ class _DemoPopupState extends State<DemoPopup> with
   );
 
   component() => SingleChildScrollView(
-    child: Container(
-    ),
+    child: widget.item,
   );
 
 }

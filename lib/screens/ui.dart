@@ -22,8 +22,8 @@ class _UIScreenState extends State<UIScreen> {
   final router = GetIt.I<NavigationService>();
 
   final items = [
-    UIItem(title: 'Roulette', route: RouteNames.Roulettes),
-    UIItem(title: 'Numbers', route: RouteNames.Roulettes),
+    UIItem(title: 'Roulette', item: Roulettes()),
+    UIItem(title: 'Numbers', item: Roulettes()),
   ];
 
   @override
@@ -46,10 +46,10 @@ class _UIScreenState extends State<UIScreen> {
     );
   }
 
-  component(UIItem item) => InkWell(
+  component(UIItem ui) => InkWell(
     onTap: () {
       // router.navigate(item.route);
-      popup();
+      popup(ui.item);
     },
     child: Container(
       width: Helper.width,
@@ -63,7 +63,7 @@ class _UIScreenState extends State<UIScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            item.title,
+            ui.title,
             textAlign: TextAlign.center,
             style: Helper.theme.headline1?.copyWith(
               color: Colors.white,
@@ -74,9 +74,11 @@ class _UIScreenState extends State<UIScreen> {
     ),
   );
 
-  popup() => showDialog(
+  popup(Widget widget) => showDialog(
     context: context, 
-    builder: (ctx) => DemoPopup(),
+    builder: (ctx) => DemoPopup(
+      item: widget,
+    ),
   );
 
 
