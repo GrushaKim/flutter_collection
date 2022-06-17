@@ -44,6 +44,7 @@ class _RoulettesState extends State<Roulettes> {
       child: FortuneWheel(
         selected: controller.stream,
         items: items,
+        indicators: [],
       ),
     );
   }
