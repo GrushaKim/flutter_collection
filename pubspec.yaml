@@ -17,6 +17,7 @@ dependencies:
   fluttertoast: ^8.0.9
   salomon_bottom_bar: ^3.3.1
   animated_text_kit: ^4.2.1
+  flutter_fortune_wheel: ^1.2.0
 
   # state management
   flutter_riverpod: ^1.0.3
