@@ -2,13 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/constants/ui_item.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
-import 'package:flutter_collection/routes/routes.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:flutter_collection/widgets/demo_popup.dart';
 import 'package:flutter_collection/widgets/header.dart';
 import 'package:flutter_collection/widgets/helper.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
-import 'package:flutter_collection/widgets/ui/slot_machine.dart';
+import 'package:flutter_collection/widgets/ui/slot_machine/slot_machine.dart';
 import 'package:get_it/get_it.dart';
 
 class UIScreen extends StatefulWidget {
