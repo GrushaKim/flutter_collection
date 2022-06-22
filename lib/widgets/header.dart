@@ -23,7 +23,6 @@ class Header extends StatelessWidget {
       height: Helper.height * .07,
       color: MyColors.mainScarlet,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           canBack 
           ? GestureDetector(

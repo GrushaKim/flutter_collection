@@ -8,6 +8,7 @@ import 'package:flutter_collection/widgets/demo_popup.dart';
 import 'package:flutter_collection/widgets/header.dart';
 import 'package:flutter_collection/widgets/helper.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
+import 'package:flutter_collection/widgets/ui/slot_machine.dart';
 import 'package:get_it/get_it.dart';
 
 class UIScreen extends StatefulWidget {
@@ -24,6 +25,7 @@ class _UIScreenState extends State<UIScreen> {
   final items = [
     UIItem(title: 'Roulette', item: Roulettes()),
     UIItem(title: 'Numbers', item: Roulettes()),
+    UIItem(title: 'Slot Machine', item: SlotMachine()),
   ];
 
   @override
@@ -32,7 +34,6 @@ class _UIScreenState extends State<UIScreen> {
       children: [
         Header(
           title: 'UI Components',
-          canBack: true,
         ),
         Container(
           padding: const EdgeInsets.all(25),
@@ -53,8 +54,8 @@ class _UIScreenState extends State<UIScreen> {
     },
     child: Container(
       width: Helper.width,
-      padding: const EdgeInsets.symmetric(vertical: 40),
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 25),
+      margin: const EdgeInsets.symmetric(vertical: 15),
       decoration: BoxDecoration(
         color: MyColors.mainPurple.withOpacity(.5),
         borderRadius: BorderRadius.circular(25),
