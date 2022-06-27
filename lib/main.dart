@@ -69,6 +69,12 @@ class MyApp extends StatelessWidget {
       letterSpacing: -.7,
       fontWeight: FontWeight.w400
     ),
+    button: GoogleFonts.montserrat(
+      fontSize: 14,
+      color: Colors.white,
+      letterSpacing: -.7,
+      fontWeight: FontWeight.bold,
+    ),
     caption: GoogleFonts.montserrat(
       fontSize: 12,
       color:MyColors.hintGr,

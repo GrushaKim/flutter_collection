@@ -2,5 +2,8 @@
   "welcome": "Welcome to Grusha's flutter world!",
   "chooseLang": "Please choose language.",
   "langTxt": "Grusha's flutter world is shown in {lang} language.",
-  "pressToExit": "Please press again to exit"
+  "pressToExit": "Please press again to exit",
+  "cameraPermission": "Please allow Grusha Flutter to access the camera.",
+  "yes": "Yes",
+  "no": "No"
 }

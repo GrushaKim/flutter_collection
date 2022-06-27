@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
-import 'package:flutter_collection/widgets/helper.dart';
+import 'package:flutter_collection/widgets/general/helper.dart';
 import 'package:get_it/get_it.dart';
 
 class DemoPopup extends StatefulWidget {

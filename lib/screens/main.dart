@@ -9,7 +9,7 @@ import 'package:flutter_collection/screens/ui.dart';
 import 'package:flutter_collection/utils/methods.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:flutter_collection/utils/translator.dart';
-import 'package:flutter_collection/widgets/helper.dart';
+import 'package:flutter_collection/widgets/general/helper.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -119,7 +119,7 @@ class _MainScreenState extends State<MainScreen>
   );
 
   tabView() => TabBarView(
-    physics: NeverScrollableScrollPhysics(),
+    physics: const NeverScrollableScrollPhysics(),
     controller: _controller,
     children: [
       HomeScreen(),

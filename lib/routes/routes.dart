@@ -3,6 +3,7 @@ import 'package:flutter_collection/screens/home.dart';
 import 'package:flutter_collection/screens/main.dart';
 import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/screens/ui.dart';
+import 'package:flutter_collection/widgets/func/my_qr.dart';
 import 'package:flutter_collection/widgets/func/qr_scanner.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
 
@@ -27,12 +28,13 @@ class Routes {
       case RouteNames.QrScanner:
         return MaterialPageRoute(builder: (_) => QrScanner());
 
+      case RouteNames.MyQr:
+        return MaterialPageRoute(builder: (_) => MyQr());
+
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
     }
-
   }
-
 }
 
 
@@ -47,4 +49,5 @@ abstract class RouteNames {
   static const Roulettes = '/roulettes';
 
   static const QrScanner = '/qrScanner';
+  static const MyQr = '/myQr';
 }

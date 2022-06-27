@@ -2,5 +2,8 @@
   "welcome": "Добро Пожаловать в мой мир с flutter!",
   "chooseLanguage": "Выберите язык.",
   "languageTxt": "Приложение работает {lang} на языке.",
-  "pressToExit": "Нажмите еще раз для выхода"
+  "pressToExit": "Нажмите еще раз для выхода",
+  "cameraPermission": "Вы разрешаете Grusha Flutter использовать вашу камеру?",
+  "yes": "Да",
+  "no": "Нет"
 }

@@ -1,14 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/constants/func_item.dart';
-import 'package:flutter_collection/constants/ui_item.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
 import 'package:flutter_collection/routes/routes.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
-import 'package:flutter_collection/widgets/func/qr_scanner.dart';
-import 'package:flutter_collection/widgets/header.dart';
-import 'package:flutter_collection/widgets/helper.dart';
+import 'package:flutter_collection/widgets/general/header.dart';
+import 'package:flutter_collection/widgets/general/helper.dart';
 import 'package:get_it/get_it.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class FuncScreen extends StatefulWidget {
   FuncScreen({Key? key}) : super(key: key);
@@ -18,11 +16,11 @@ class FuncScreen extends StatefulWidget {
 }
 
 class _FuncScreenState extends State<FuncScreen> {
-
   final router = GetIt.I<NavigationService>();
 
   final items = [
     FuncItem(title: 'QR Scanner', route: RouteNames.QrScanner),
+    FuncItem(title: 'My QR', route: RouteNames.MyQr),
   ];
 
 
@@ -46,9 +44,14 @@ class _FuncScreenState extends State<FuncScreen> {
   }
 
   component(FuncItem item) => InkWell(
-    onTap: () {
-      // router.navigate(item.route);
-      router.navigate(item.route);
+    onTap: () async {
+      if(item.route == RouteNames.QrScanner) {
+        if(await Permission.camera.request() != PermissionStatus.denied) {
+          router.navigate(item.route);
+        }
+      } else {
+        router.navigate(item.route);
+      }
     },
     child: Container(
       width: Helper.width,

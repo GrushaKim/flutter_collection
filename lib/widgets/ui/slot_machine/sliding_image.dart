@@ -20,7 +20,7 @@ class _SingleSlidingImageState extends State<SingleSlidingImage> {
       final divider = 
       setState((){
         
-      })
+      });
     });
   }
 

@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
-import 'package:flutter_collection/widgets/helper.dart';
 import 'package:flutter_collection/widgets/ui/slot_machine/sliding_number.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:roller_list/roller_list.dart';

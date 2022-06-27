@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_collection/widgets/helper.dart';
+import 'package:flutter_collection/widgets/general/helper.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 
 class Roulettes extends StatefulWidget {
