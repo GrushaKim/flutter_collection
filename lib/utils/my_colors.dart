@@ -8,6 +8,9 @@ class MyColors {
   static const pastelPurple = Color(0xFF676FA3);
   static const pastelPink = Color(0xFFFFA0A0);
   static const bgPurple = Color(0xFFCDDEFF);
+
+  static const mainYellow = Color(0xFFFCD900);
+  static const neonYellow = Color(0xFFF6F54D);
   
   static const txtBk = Color(0xFF0F1334);
   static const txtRed = Color(0xFFF11F3F);
