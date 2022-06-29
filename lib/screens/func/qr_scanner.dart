@@ -13,14 +13,14 @@ import 'package:get_it/get_it.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
-class QrScanner extends StatefulWidget {
-  QrScanner({Key? key}) : super(key: key);
+class QrScannerScreen extends StatefulWidget {
+  QrScannerScreen({Key? key}) : super(key: key);
 
   @override
-  State<QrScanner> createState() => _QrScannerState();
+  State<QrScannerScreen> createState() => _QrScannerScreenState();
 }
 
-class _QrScannerState extends State<QrScanner> {
+class _QrScannerScreenState extends State<QrScannerScreen> {
   final router = GetIt.I<NavigationService>();
   final qrKey = GlobalKey(debugLabel: 'QR');
   Barcode? result;

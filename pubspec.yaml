@@ -23,6 +23,7 @@ dependencies:
   # state managements
   flutter_riverpod: ^1.0.3
   hooks_riverpod: ^1.0.3
+  riverpod: ^1.0.3
 
   # api fetcher
   dio: ^4.0.6

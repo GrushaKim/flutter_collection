@@ -21,6 +21,7 @@ class _FuncScreenState extends State<FuncScreen> {
   final items = [
     FuncItem(title: 'QR Scanner', route: RouteNames.QrScanner),
     FuncItem(title: 'My QR', route: RouteNames.MyQr),
+    FuncItem(title: 'Riverpod', route: RouteNames.Riverpod),
   ];
 
 
@@ -55,8 +56,8 @@ class _FuncScreenState extends State<FuncScreen> {
     },
     child: Container(
       width: Helper.width,
-      padding: const EdgeInsets.symmetric(vertical: 40),
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 25),
+      margin: const EdgeInsets.symmetric(vertical: 15),
       decoration: BoxDecoration(
         color: MyColors.mainScarlet.withOpacity(.38),
         borderRadius: BorderRadius.circular(25),

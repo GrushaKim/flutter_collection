@@ -5,6 +5,7 @@ class MyColors {
 
   static const mainScarlet = Color(0xFFFF5959);
   static const mainPurple = Color(0xFF764AF1);
+  static const mainBlue = Color(0xFF455EFF);
   static const pastelPurple = Color(0xFF676FA3);
   static const pastelPink = Color(0xFFFFA0A0);
   static const bgPurple = Color(0xFFCDDEFF);

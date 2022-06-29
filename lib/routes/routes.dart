@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_collection/screens/func/my_qr.dart';
+import 'package:flutter_collection/screens/func/qr_scanner.dart';
+import 'package:flutter_collection/screens/func/riverpod.dart';
 import 'package:flutter_collection/screens/home.dart';
 import 'package:flutter_collection/screens/main.dart';
 import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/screens/ui.dart';
-import 'package:flutter_collection/widgets/func/my_qr.dart';
-import 'package:flutter_collection/widgets/func/qr_scanner.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
 
 class Routes {
@@ -26,10 +27,13 @@ class Routes {
         return MaterialPageRoute(builder: (_) => Roulettes());
 
       case RouteNames.QrScanner:
-        return MaterialPageRoute(builder: (_) => QrScanner());
+        return MaterialPageRoute(builder: (_) => QrScannerScreen());
 
       case RouteNames.MyQr:
-        return MaterialPageRoute(builder: (_) => MyQr());
+        return MaterialPageRoute(builder: (_) => MyQrScreen());
+   
+      case RouteNames.Riverpod:
+        return MaterialPageRoute(builder: (_) => RiverpodScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
@@ -50,4 +54,5 @@ abstract class RouteNames {
 
   static const QrScanner = '/qrScanner';
   static const MyQr = '/myQr';
+  static const Riverpod = '/riverpod';
 }

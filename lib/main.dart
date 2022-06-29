@@ -2,7 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
 import 'package:flutter_collection/routes/routes.dart';
-import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/utils/locators.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:get_it/get_it.dart';

@@ -11,14 +11,14 @@ import 'package:flutter_collection/widgets/general/helper.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class MyQr extends StatefulWidget {
-  MyQr({Key? key}) : super(key: key);
+class MyQrScreen extends StatefulWidget {
+  MyQrScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyQr> createState() => _MyQrState();
+  State<MyQrScreen> createState() => _MyQrScreenState();
 }
 
-class _MyQrState extends State<MyQr> {
+class _MyQrScreenState extends State<MyQrScreen> {
 
   final TextEditingController _controller = TextEditingController();
   String _errTxt = '';
