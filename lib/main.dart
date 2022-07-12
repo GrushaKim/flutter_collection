@@ -39,7 +39,8 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       onGenerateRoute: Routes.generateRoute,
       onGenerateInitialRoutes: (_) => [
-        Routes.generateRoute(RouteSettings(name: RouteNames.Splash)),
+        // Routes.generateRoute(RouteSettings(name: RouteNames.Splash)),
+        Routes.generateRoute(RouteSettings(name: RouteNames.Main)),
       ],
       theme: themeData(),
     );

@@ -22,6 +22,7 @@ class _FuncScreenState extends State<FuncScreen> {
     FuncItem(title: 'QR Scanner', route: RouteNames.QrScanner),
     FuncItem(title: 'My QR', route: RouteNames.MyQr),
     FuncItem(title: 'Riverpod', route: RouteNames.Riverpod),
+    FuncItem(title: 'D-day Countdown', route: RouteNames.Dday),
   ];
 
 

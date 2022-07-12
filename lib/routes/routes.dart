@@ -6,6 +6,7 @@ import 'package:flutter_collection/screens/home.dart';
 import 'package:flutter_collection/screens/main.dart';
 import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/screens/ui.dart';
+import 'package:flutter_collection/widgets/func/dday_counter.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
 
 class Routes {
@@ -26,6 +27,8 @@ class Routes {
       case RouteNames.Roulettes:
         return MaterialPageRoute(builder: (_) => Roulettes());
 
+      //FUNCS
+
       case RouteNames.QrScanner:
         return MaterialPageRoute(builder: (_) => QrScannerScreen());
 
@@ -34,6 +37,9 @@ class Routes {
    
       case RouteNames.Riverpod:
         return MaterialPageRoute(builder: (_) => RiverpodScreen());
+    
+      case RouteNames.Dday:
+        return MaterialPageRoute(builder: (_) => DdayCounter());
 
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
@@ -50,9 +56,10 @@ abstract class RouteNames {
   static const String UI = '/ui';
   static const String Functions = '/functions';
 
-  static const Roulettes = '/roulettes';
+  static const String Roulettes = '/roulettes';
 
-  static const QrScanner = '/qrScanner';
-  static const MyQr = '/myQr';
-  static const Riverpod = '/riverpod';
+  static const String QrScanner = '/qrScanner';
+  static const String MyQr = '/myQr';
+  static const String Riverpod = '/riverpod';
+  static const String Dday = '/dday';
 }
