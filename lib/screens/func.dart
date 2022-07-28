@@ -1,5 +1,9 @@
+import 'dart:developer';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/constants/func_item.dart';
+import 'package:flutter_collection/model/func/quote.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
 import 'package:flutter_collection/routes/routes.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
@@ -23,8 +27,15 @@ class _FuncScreenState extends State<FuncScreen> {
     FuncItem(title: 'My QR', route: RouteNames.MyQr),
     FuncItem(title: 'Riverpod', route: RouteNames.Riverpod),
     FuncItem(title: 'D-day Countdown', route: RouteNames.Dday),
+    FuncItem(title: 'Dropdown Filter', route: RouteNames.Dropdown),
   ];
 
+  final data = [];
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

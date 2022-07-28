@@ -7,6 +7,7 @@ import 'package:flutter_collection/screens/main.dart';
 import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/screens/ui.dart';
 import 'package:flutter_collection/widgets/func/dday_counter.dart';
+import 'package:flutter_collection/screens/func/dropdown_filter.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
 
 class Routes {
@@ -40,6 +41,9 @@ class Routes {
     
       case RouteNames.Dday:
         return MaterialPageRoute(builder: (_) => DdayCounter());
+      
+      case RouteNames.Dropdown:
+        return MaterialPageRoute(builder: (_) => DropdownFilterScreen());
 
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
@@ -62,4 +66,5 @@ abstract class RouteNames {
   static const String MyQr = '/myQr';
   static const String Riverpod = '/riverpod';
   static const String Dday = '/dday';
+  static const String Dropdown = '/dropdownFilter';
 }

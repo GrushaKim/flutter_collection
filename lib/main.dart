@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
 import 'package:flutter_collection/routes/routes.dart';
@@ -6,12 +7,19 @@ import 'package:flutter_collection/utils/locators.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setUpLocators();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   await EasyLocalization.ensureInitialized();
-  
+
+
   runApp(
     EasyLocalization(
       supportedLocales: const [

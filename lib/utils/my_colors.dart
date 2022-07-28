@@ -16,6 +16,8 @@ class MyColors {
   static const txtBk = Color(0xFF0F1334);
   static const txtRed = Color(0xFFF11F3F);
 
+  static const dropdownBk = Color.fromARGB(255, 23, 28, 106);
+
   static const hintGr = Color(0xFF696B74);
   static const border = Color(0xFFEFEFEF);
 }

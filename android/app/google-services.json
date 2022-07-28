@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "218291736554",
+    "project_id": "flutter-collection-1b086",
+    "storage_bucket": "flutter-collection-1b086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218291736554:android:43168b749c0c3bbf0d2c93",
+        "android_client_info": {
+          "package_name": "app.grushenka.flutter_collection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218291736554-4ulplopfug044q7ej1k8p069jg9ck9lo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVQpqHHiSMB4wAlxil1xEeBDPruefYIf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218291736554-4ulplopfug044q7ej1k8p069jg9ck9lo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "218291736554-mod4ccgb1o5ualhok0r9b2mqngqjh86v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.grushenka.flutterCollection"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,13 +20,12 @@ dependencies:
   flutter_fortune_wheel: ^1.2.0
   roller_list: ^1.0.2
 
-  # state managements
-  flutter_riverpod: ^1.0.3
-  hooks_riverpod: ^1.0.3
-  riverpod: ^1.0.3
+  # state management
+  get: ^4.6.5
 
-  # api fetcher
+  # data
   dio: ^4.0.6
+  json_annotation: ^4.6.0
 
   # di
   get_it: ^7.2.0
@@ -35,7 +34,6 @@ dependencies:
   easy_localization: ^3.0.0
   google_fonts: ^3.0.1
   flutter_svg: ^1.0.3
-  freezed_annotation: ^2.0.3
   qr_code_scanner: ^0.7.0
   shared_preferences: ^2.0.15
 
@@ -43,13 +41,19 @@ dependencies:
   qr_flutter: ^4.0.0
   permission_handler: ^10.0.0
 
+  # firebase
+  firebase_core: ^1.20.0
+  firebase_storage: ^10.3.4
+  cloud_firestore: ^3.4.1
+  rxdart: ^0.27.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.4
   build_runner: ^2.1.11
-  freezed: ^2.0.3+1
+  json_serializable: ^6.3.1
 
 # following page: https://dart.dev/tools/pub/pubspec
 
