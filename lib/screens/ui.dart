@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_collection/constants/ui_item.dart';
 import 'package:flutter_collection/routes/navigation_service.dart';
+import 'package:flutter_collection/routes/routes.dart';
+import 'package:flutter_collection/screens/ui/animated_splash.dart';
 import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:flutter_collection/widgets/general/demo_popup.dart';
 import 'package:flutter_collection/widgets/general/header.dart';
@@ -25,6 +27,7 @@ class _UIScreenState extends State<UIScreen> {
     UIItem(title: 'Roulette', item: Roulettes()),
     UIItem(title: 'Numbers', item: Roulettes()),
     UIItem(title: 'Slot Machine', item: SlotMachine()),
+    UIItem(title: 'Animated Splash', popup: false, route: RouteNames.AnimatedSplash),
   ];
 
   @override
@@ -48,8 +51,11 @@ class _UIScreenState extends State<UIScreen> {
 
   component(UIItem ui) => InkWell(
     onTap: () {
-      // router.navigate(item.route);
-      popup(ui.item);
+      if(ui.popup) {
+        popup(ui.item!);
+      } else {
+        router.navigate(ui.route!);
+      }
     },
     child: Container(
       width: Helper.width,

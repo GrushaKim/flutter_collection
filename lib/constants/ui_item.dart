@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 class UIItem {
   final String title;
-  final Widget item;
+  final bool popup;
+  final Widget? item;
+  final String? route;
 
   UIItem({
     required this.title,
-    required this.item,
+    this.popup = true,
+    this.item,
+    this.route,
   });
 }

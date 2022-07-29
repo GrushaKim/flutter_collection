@@ -1,7 +1,4 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_collection/model/func/quote.dart';
-import 'package:flutter_collection/utils/my_colors.dart';
 import 'package:flutter_collection/widgets/func/dropdown_controller.dart';
 import 'package:flutter_collection/widgets/func/dropdown_filter_tabs.dart';
 import 'package:flutter_collection/widgets/general/custom_scaffold.dart';
@@ -13,21 +10,41 @@ import 'package:get/instance_manager.dart';
 class DropdownFilterScreen extends StatelessWidget{
   const DropdownFilterScreen({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(DropdownController());
     return CustomScaffold(
       bgColor: Colors.black.withOpacity(0.18),
-      child: Column(
-        children: [
-          Header(
-            canBack: true,
+      child: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment(0.0, 1.0),
+              end: Alignment(0.0, -0.27),
+              colors: [
+                Color(0xff004b81),
+                Color(0xff004376),
+                Color(0xff00325d),
+                Color(0xff00254b),
+                Color(0xff001e40),
+                Color(0xff001c3d)
+              ],
+              stops: [0.0, 0.071, 0.284, 0.505, 0.738, 1.0],
+            ),
           ),
-          title(),
-          GetBuilder<DropdownController>(
-            builder: (_) => DropdownFilterTabs(),
-          )
-        ],
+        child: Column(
+          children: [
+            Header(
+              canBack: true,
+            ),
+            title(),
+            Flexible(
+              child: GetBuilder<DropdownController>(
+                builder: (_) => const DropdownFilterTabs(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,7 +1,6 @@
 import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_collection/model/func/quote.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/get.dart';
 
 class DropdownController extends GetxController {
@@ -11,7 +10,6 @@ class DropdownController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-
     _loadItems("All");
   }
 
@@ -32,7 +30,7 @@ class DropdownController extends GetxController {
     
     for(var e in items) {
       if(e.author == value) {
-        categoryId.add(e.author!);
+        categoryId.add(e.author);
       }
     }
 
@@ -40,8 +38,6 @@ class DropdownController extends GetxController {
       items.removeWhere((e) => !categoryId.contains(e.author));
       items.sort((a, b) => a.createdAt.compareTo(b.createdAt));
     }
-
-    log(items.length.toString());
   }
 
   resort(String value) {

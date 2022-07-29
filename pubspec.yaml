@@ -19,6 +19,7 @@ dependencies:
   animated_text_kit: ^4.2.1
   flutter_fortune_wheel: ^1.2.0
   roller_list: ^1.0.2
+  particles_flutter: ^0.1.4
 
   # state management
   get: ^4.6.5

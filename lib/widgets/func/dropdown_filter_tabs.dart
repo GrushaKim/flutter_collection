@@ -14,7 +14,6 @@ class DropdownFilterTabs extends GetView<DropdownController> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         filters(),
         collapsed(),
@@ -23,6 +22,7 @@ class DropdownFilterTabs extends GetView<DropdownController> {
   }
 
   filters() => Container(
+    height: 50,
     alignment: Alignment.centerRight,
     child: Obx(() => DropdownButton<dynamic>(
         value: controller.sort.value,
@@ -51,10 +51,10 @@ class DropdownFilterTabs extends GetView<DropdownController> {
   );
 
   collapsed() => Expanded(
-    child: Obx(() => ListView.separated(
+    child: Obx(() => ListView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
         itemCount: controller.items.length,
-        separatorBuilder: (ctx, _) => const Divider(height: 1, color: Colors.white,),
+        shrinkWrap: true,
         itemBuilder: (ctx, idx) {
           return quote(controller.items[idx]);
         },
@@ -68,6 +68,7 @@ class DropdownFilterTabs extends GetView<DropdownController> {
 
   quote(QuoteModel e) => Container(
     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+    margin: const EdgeInsets.symmetric(vertical: 15),
     decoration: BoxDecoration(
       color: MyColors.dropdownBk.withOpacity(0.4),
       borderRadius: BorderRadius.circular(8),
@@ -78,14 +79,17 @@ class DropdownFilterTabs extends GetView<DropdownController> {
         Text(
           e.quote,
           style: Helper.theme.bodyText1?.copyWith(
-            color: Colors.white.withOpacity(.7),
+            color: Colors.white,
             fontWeight: FontWeight.bold,
+            fontSize: 18,
+            letterSpacing: -.8,
+            height: 1.3,
           ),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 12),
         Text(
-          DateFormat.MMMEd(e.createdAt.toLocal()).toString(),
-          style: Helper.theme.caption,
+          DateFormat('dd-MM-yyyy').format(e.createdAt).toString(),
+          style: Helper.theme.caption?.copyWith(color: Colors.white.withOpacity(.5)),
         ),
       ],
     )

@@ -120,7 +120,7 @@ class _RollSlotState extends State<RollSlot> {
       }
       if (widget.additionalListToEndAndStart) {
         addToCurrentList();
-        WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+        WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
           jump();
         });
       }

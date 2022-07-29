@@ -6,6 +6,7 @@ import 'package:flutter_collection/screens/home.dart';
 import 'package:flutter_collection/screens/main.dart';
 import 'package:flutter_collection/screens/splash.dart';
 import 'package:flutter_collection/screens/ui.dart';
+import 'package:flutter_collection/screens/ui/animated_splash.dart';
 import 'package:flutter_collection/widgets/func/dday_counter.dart';
 import 'package:flutter_collection/screens/func/dropdown_filter.dart';
 import 'package:flutter_collection/widgets/ui/roulettes.dart';
@@ -25,10 +26,15 @@ class Routes {
       case RouteNames.UI:
         return MaterialPageRoute(builder: (_) => const UIScreen());
 
+      // UI
+
       case RouteNames.Roulettes:
         return MaterialPageRoute(builder: (_) => Roulettes());
+      
+      case RouteNames.AnimatedSplash:
+        return MaterialPageRoute(builder: (_) => AnimatedSplashScreen());
 
-      //FUNCS
+      // FUNCS
 
       case RouteNames.QrScanner:
         return MaterialPageRoute(builder: (_) => QrScannerScreen());
@@ -60,8 +66,12 @@ abstract class RouteNames {
   static const String UI = '/ui';
   static const String Functions = '/functions';
 
+  // UI components
   static const String Roulettes = '/roulettes';
+  static const String AnimatedSplash = '/animatedSplash';
 
+
+  // Function components 
   static const String QrScanner = '/qrScanner';
   static const String MyQr = '/myQr';
   static const String Riverpod = '/riverpod';
